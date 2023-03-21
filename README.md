@@ -1,6 +1,6 @@
 # NATIONAL PARKS REVIEWER 5000
 
-## Created on 3/20/2023 by: Jesse Hudak, Paige Girari, Robert Lee, George Semfield for EDX / UC Berkely Project 2
+## Created on 3/20/2023 by: Jesse Hudak, Paige Girardi, Robert Lee, George Semfield for EDX / UC Berkely Project 2
 
 ---
 
