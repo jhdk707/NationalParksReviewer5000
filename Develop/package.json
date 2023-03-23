@@ -1,0 +1,38 @@
+{
+  "name": "nationalparksreviewer",
+  "version": "1.0.0",
+  "description": "A website that contains information and upcoming events about National Parks and allows the community to review them! ",
+  "main": "server.js",
+  "scripts": {
+    "test": "npm run test",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jhdk707/NationalParksReviewer5000.git"
+  },
+  "keywords": [
+    "National",
+    "Parks",
+    "Parks",
+    "and",
+    "Rec",
+    "Ron",
+    "Swanson",
+    "Reviews"
+  ],
+  "author": "RESTful APIs Team EDX",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jhdk707/NationalParksReviewer5000/issues"
+  },
+  "homepage": "https://github.com/jhdk707/NationalParksReviewer5000#readme",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "express": "^4.18.2",
+    "handlebars": "^4.7.7",
+    "mysql2": "^3.2.0",
+    "node": "^19.8.1",
+    "sequelize": "^6.29.3"
+  }
+}
