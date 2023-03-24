@@ -1,0 +1,17 @@
+[
+    {
+        "title": "test Title1",
+        "content": "test Content1",
+        "user_id": 1
+    },
+    {
+        "title": "test Title2",
+        "content": "test Content2",
+        "user_id": 2
+    },
+    {
+        "title": "test Title3",
+        "content": "test Content3",
+        "user_id": 1
+    }
+  ]
