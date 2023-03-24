@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tech Blog</title>
+  <link rel="stylesheet" href="/stylesheets/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.1/font/bootstrap-icons.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <header>
+      <h1>
+        <a href="/">National Parks Review <i class="bi bi-house-fill"></i></a>
+      </h1>
+      <nav>
+        {{#if loggedIn}}
+        <a href="/dashboard">Review Page</a>
+        <button id="logout" class="btn-no-style">Logout</button>
+        {{else}}
+        <a href="/dashboard">Review Page</a>
+        <a href="/login">Login</a>
+        {{/if}}
+      </nav>
+    </header>
+    <main>
+      {{{ body }}}
+    </main>
+    <footer>
+      Enjoy the Parks! Keep Tahoe blue and Yellowstone yellow!
+    </footer>
+  </div>
+
+{{#if loggedIn}}
+<script src="/js/logout.js"></script>
+{{/if}}
+
+</body>
+
+</html>
