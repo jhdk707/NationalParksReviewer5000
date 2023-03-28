@@ -5,15 +5,44 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" hre="output.css">
+    <link href="/dist/output.css" rel="stylesheet">
 </head>
   <body>
-    <h1>National Parks</h1>
+      <body>
+        <div class="bg-no-repeat bg-cover bg-left bg-fixed"
+        style="background-image: url('https://images.pexels.com/photos/640907/pexels-photo-640907.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');">
+        <h1 class="text-3xl text-center"></h1>Nation Park Reviwers</h1>
+      
+        <div class="flex justify-center place-content-center items-center h-screen ">
+            <div class="w-96 p-6 shadow-lg bg-white rounded-md">
+                <h1 class="text-3xl block text-left"> National Parks Serach</h1>
+            <input type="username" id="username" class="border w-full text-base px-2 py-1 focus:outline-none focus:border-gray-600" placeholder="Name of the Park" />
+                <button type="submit" class="text-lg border w-full mt-3 text-semibold border border-gray-600 text-black rounded-md bg- ">Search</button>
+                </div>
+                <div class="flex justify-center place-content-center items-center h-screen">
+            <div class="w-96 p-6 shadow-lg bg-white rounded-md">
+                <h1 class="text-3xl block text-left"> Sign in to your Account</h1>
+               <div class="mt-3"></div>
+          <div> 
+            <label for="username" class="block mb-2 text-lg font-large text-gray-900 dark:text-black">Username</label>
+            <input type="username" id="username" class="border w-full text-base px-2 py-1 focus:outline-none focus:border-gray-600" placeholder="Username" />
+        </div>
+        <div class="mt-3">
+            <label for="password" class="block mb-2 text-lg font-large text-gray-900 dark:text-black">Password</label>
+            <input type="password" id="password" class="border w-full text-base px-2 py-1 focus:outline-none focus:ring-0 focus:border-gray-600" placeholder="Enter Password..." />
+    
+          </div>
+          <button type="submit" class="text-lg border w-full mt-3 text-semibold border border-gray-600 text-black rounded-md bg- ">Sign in</button>
+        </div>
+        </div>
+        </div>
 
-    <input type="text" id="search-input" placeholder="Search parks..." />
-    <button id="search-button">Search</button>
-
-    <ul id="park-list"></ul>
+        
+            </div>
+            
+            </div>
+      </div>
+    </div>
 
     <script
       type="application/javascript"
