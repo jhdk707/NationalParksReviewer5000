@@ -1,21 +1,20 @@
 const router = require('express').Router();
 const { Post } = require('../../models');
-
-// router.post('/post', async (req, res) => {
-//     //boiler plate placeholder
-//     try {
-//         const newPost = await Post.create({
-//             ...req.body,
-//             user_id: req.session.user_id,
-//         });
-//         res.status(200).json(newPost);
-//     } catch (err) {
-//         res.status(400).json(err);
-//     }
-// });
+const withAuth = require('../../utils/auth');
 
 router.post('/', async (req, res) => {
-    //boiler plate placeholder
+    //example usage:
+    //POST localhost:3001/api/post
+    //with JSON body containing something like:
+
+    /* A USER WITH AN ID MUST EXIST FIRST
+        {
+        "title": "test Title1",
+        "content": "test Content1",
+	 	"user_id": 1
+        }
+    */
+    
     Post.create(req.body)
         .then((postData) => {
         res.json(postData);
