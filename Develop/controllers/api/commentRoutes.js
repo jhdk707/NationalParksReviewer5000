@@ -1,17 +1,16 @@
 const router = require('express').Router();
 const { Comment } = require('../../models');
 
-router.post('/comment', async (req, res) => {
-    //boiler plate placeholder
+router.post('/', withAuth, async(req, res) => {
     try {
-        const newPost = await Post.create({
+        const newComment = await Comment.create({
             ...req.body,
-            user_id: req.session.user_id,
-        });
-        res.status(200).json(newPost);
-    } catch (err) {
-        res.status(400).json(err);
+            userId: req.session.userId,
+        })
+        res.json(newComment)
+    } catch (error) {
+        res.status(500).json(error)
     }
-});
+})
 
 module.exports = router;
