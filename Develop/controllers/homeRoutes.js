@@ -1,3 +1,4 @@
+
 const router = require('express').Router();
 const withAuth = require('../../utils/auth');
 const { Comment, Post, User } = require('../models');
@@ -95,6 +96,13 @@ router.get('/profile', withAuth, async (req, res) => {
 
 router.post('/login', async (req, res) => {
     //placeholder
+
+const router = require("express").Router();
+const withAuth = require("../utils/auth.js");
+
+router.post("/login", async (req, res) => {
+  //placeholder
+
 });
 
 module.exports = router;
