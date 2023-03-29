@@ -27,19 +27,6 @@ router.post("/login", async (req, res) => {
       return;
     }
 
-    const userName = await User.findOne({
-      where: {
-        [Op.or]: [{ email: req.body.email }, { username: req.body.email }],
-      },
-    });
-
-    if (!userName) {
-      res
-        .status(400)
-        .json({ message: "Incorrect email or password, please try again" });
-      return;
-    }
-
     const validPassword = await userData.checkPassword(req.body.password);
 
     if (!validPassword) {
