@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{title}}</title>
+  </head>
+  <body>
+    <h1>{{title}}</h1>
+    <p>{{content}}</p>
+    <p>Posted by {{username}}</p>
+    
+    <h2>Comments</h2>
+    {{#each comments}}
+      <div>
+        <p>{{content}}</p>
+        <p>Posted by {{this.user.username}}</p>
+      </div>
+    {{/each}}
+
+    <form action="/post/{{id}}/comment" method="POST">
+      <textarea name="content"></textarea>
+      <button type="submit">Add Comment</button>
+    </form>
+    
+    {{#if logged_in}}
+      <a href="/dashboard">Dashboard</a>
+      <a href="/logout">Logout</a>
+    {{else}}
+      <a href="/login">Login</a>
+      <a href="/signup">Signup</a>
+    {{/if}}
+  </body>
+</html>
