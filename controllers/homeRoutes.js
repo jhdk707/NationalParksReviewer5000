@@ -102,8 +102,4 @@ router.get("/signup", (req, res) => {
   res.render("signup");
 });
 
-router.post("/login", async (req, res) => {
-  //placeholder
-});
-
 module.exports = router;
