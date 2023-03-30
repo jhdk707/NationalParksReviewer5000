@@ -16,32 +16,34 @@ router.post("/", async (req, res) => {
   }
 });
 
-router.post("/login", async (req, res) => {
+router.post("/login", async (req, res) => { 
+  console.log(req.body);
   try {
     const userData = await User.findOne({ where: { email: req.body.email } });
-
+    console.log(userData);
     if (!userData) {
       res
         .status(400)
         .json({ message: "Incorrect email or password, please try again" });
       return;
     }
-
-    const userName = await User.findOne({
-      where: {
-        [Op.or]: [{ email: req.body.email }, { username: req.body.email }],
-      },
-    });
-
-    if (!userName) {
-      res
-        .status(400)
-        .json({ message: "Incorrect email or password, please try again" });
-      return;
-    }
+    //// this shit is dumb
+    // // const userName = await User.findOne({
+    //   where: {
+    //     [Op.or]: [{ email: req.body.email }, { username: req.body.email }],
+    //   },
+    // });
+    // console.log(userName);
+    // if (!userName) { 
+    
+    //   res
+    //     .status(400)
+    //     .json({ message: "Incorrect email or password, please try again" });
+    //   return;
+    // }
 
     const validPassword = await userData.checkPassword(req.body.password);
-
+    console.log(validPassword);
     if (!validPassword) {
       res
         .status(400)
