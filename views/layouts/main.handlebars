@@ -16,7 +16,7 @@
         <a href="/">National Parks Review <i class="bi bi-house-fill"></i></a>
       </h1>
       <nav>
-        {{#if loggedIn}}
+        {{#if logged_in}}
         <a href="/dashboard">Review Page</a>
         <button id="logout" class="btn-no-style">Logout</button>
         {{else}}
@@ -33,7 +33,7 @@
     </footer>
   </div>
 
-{{#if loggedIn}}
+{{#if logged_in}}
 <script src="/js/logout.js"></script>
 {{/if}}
 
