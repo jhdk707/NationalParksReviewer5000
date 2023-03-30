@@ -1,11 +1,13 @@
-//import modules and routes
+// import modules and routes
 const path = require("path");
 const express = require("express");
 const session = require("express-session");
 const exphbs = require("express-handlebars");
 const routes = require("./controllers");
+// const signupRoutes = require("./controllers/api/signupRoutes.js");
 const helpers = require("./utils/helpers");
-//import connection to sequelize
+
+// import connection to sequelize
 const sequelize = require("./config/connection");
 const SequelizeStore = require("connect-session-sequelize")(session.Store);
 
@@ -35,8 +37,10 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "public")));
 
-app.use(routes);
+// Use the routes
+app.use("/", routes);
+// app.use("/api/signup", signupRoutes);
 
 sequelize.sync({ force: false }).then(() => {
-  app.listen(PORT, () => console.log("Now listening"));
+  app.listen(PORT, () => console.log(`Now listening on http://localhost:${PORT}`));
 });
