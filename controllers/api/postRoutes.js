@@ -1,27 +1,130 @@
 const router = require('express').Router();
-const { Post } = require('../../models');
+const { User, Post, Comment } = require('../../models');
 const withAuth = require('../../utils/auth');
 
-router.post('/', async (req, res) => {
-    //example usage:
-    //POST localhost:3001/api/post
-    //with JSON body containing something like:
+// Get all posts
+router.get("/", (req, res) => {
+    Post.findAll({
+            attributes: ["id", "content", "title", "created_at"],
 
-    /* A USER WITH AN ID MUST EXIST FIRST
-        {
-        "title": "test Title1",
-        "content": "test Content1",
-	 	"user_id": 1
-        }
-    */
-    
-    Post.create(req.body)
-        .then((postData) => {
-        res.json(postData);
-    })
-    .catch((err) => {
-        res.json(err);
-    });
+            include: [{
+                    model: User,
+                    attributes: ["username"],
+                },
+                {
+                    model: Comment,
+                    attributes: ["id", "content", "post_id", "user_id", "created_at"],
+                    include: {
+                        model: User,
+                        attributes: ["username"],
+                    },
+                },
+            ],
+        })
+        .then((postData) => res.json(postData))
+        .catch((err) => {
+            console.log(err);
+            res.status(500).json(err);
+        });
 });
+
+// Get a single post
+router.get("/:id", (req, res) => {
+    Post.findOne({
+            where: {
+                id: req.params.id,
+            },
+            attributes: ["id", "content", "title", "created_at"],
+            include: [{
+                    model: User,
+                    attributes: ["username"],
+                },
+                {
+                    model: Comment,
+                    attributes: ["id", "content", "post_id", "user_id", "created_at"],
+                    include: {
+                        model: User,
+                        attributes: ["username"],
+                    },
+                },
+            ],
+        })
+        .then((postData) => {
+            if (!postData) {
+                res.status(404).json({
+                    message: "No post found with this id"
+                });
+                return;
+            }
+            res.json(postData);
+        })
+        .catch((err) => {
+            console.log(err);
+            res.status(500).json(err);
+        });
+});
+
+// Create a post
+router.post("/", withAuth, (req, res) => {
+    console.log("creating");
+    Post.create({
+            title: req.body.title,
+            content: req.body.content,
+            user_id: req.session.user_id
+        })
+        .then((postData) => res.json(postData))
+        .catch((err) => {
+            console.log(err);
+            res.status(500).json(err);
+        });
+});
+
+// Update a post
+router.put("/:id", withAuth, (req, res) => {
+    Post.update({
+            title: req.body.title,
+            content: req.body.content,
+        }, {
+            where: {
+                id: req.params.id,
+            },
+        })
+        .then((postData) => {
+            if (!postData) {
+                res.status(404).json({
+                    message: "No post found with this id"
+                });
+                return;
+            }
+            res.json(postData);
+        })
+        .catch((err) => {
+            console.log(err);
+            res.status(500).json(err);
+        });
+});
+
+//Delete a post
+router.delete("/:id", withAuth, (req, res) => {
+    Post.destroy({
+            where: {
+                id: req.params.id,
+            },
+        })
+        .then((postData) => {
+            if (!postData) {
+                res.status(404).json({
+                    message: "No post found with this id"
+                });
+                return;
+            }
+            res.json(postData);
+        })
+        .catch((err) => {
+            console.log(err);
+            res.status(500).json(err);
+        });
+});
+
 
 module.exports = router;
