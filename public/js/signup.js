@@ -1,18 +1,44 @@
-const signupForm = document.querySelector(".signup-form");
+// const signupForm = document.querySelector(".signup-form");
 
-signupForm.addEventListener("submit", async (event) => {
+// signupForm.addEventListener("submit", async (event) => {
+//   event.preventDefault();
+
+//   const formData = new FormData(signupForm);
+
+//   const response = await fetch("/api/user", {
+//     method: "POST",
+//     body: formData,
+//   });
+
+//   if (response.ok) {
+//     document.location.replace("/");
+//   } else {
+//     alert("Failed to sign up");
+//   }
+// });
+
+const signupFormHandler = async (event) => {
   event.preventDefault();
 
-  const formData = new FormData(signupForm);
+  const username = document.querySelector('#username-signup').value.trim();
+  const email = document.querySelector('#email-signup').value.trim();
+  const password = document.querySelector('#password-signup').value.trim();
 
-  const response = await fetch("/api/user", {
-    method: "POST",
-    body: formData,
-  });
+  if (username && email && password) {
+    const response = await fetch('/api/user', {
+      method: 'POST',
+      body: JSON.stringify({ username, email, password }),
+      headers: { 'Content-Type': 'application/json' },
+    });
 
-  if (response.ok) {
-    document.location.replace("/");
-  } else {
-    alert("Failed to sign up");
+    if (response.ok) {
+      document.location.replace('/dashboard');
+    } else {
+      alert(response.statusText);
+    }
   }
-});
+};
+
+document
+  .querySelector('.signup-form')
+  .addEventListener('submit', signupFormHandler);
