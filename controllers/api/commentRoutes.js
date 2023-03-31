@@ -24,27 +24,19 @@ router.get('/:id', (req, res) => {
         })
 });
 
-
-router.post('/', async (req, res) => {
-    //example usage:
-    //POST localhost:3001/api/post
-    //with JSON body containing something like:
-
-    /* A USER WITH AN ID MUST EXIST FIRST
-        {
-        "title": "test Title1",
-        "content": "test Content1",
-	 	"user_id": 1
-        }
-    */
-    
-    Post.create(req.body)
-        .then((dbPostData) => {
-        res.json(dbPostData);
-    })
-    .catch((err) => {
-        res.json(err);
-    });
+router.post('/', withAuth, (req, res) => {
+    if (req.session) {
+        Comment.create({
+                content: req.body.content,
+                post_id: req.body.post_id,
+                user_id: req.session.user_id,
+            })
+            .then(dbCommentData => res.json(dbCommentData))
+            .catch(err => {
+                console.log(err);
+                res.status(400).json(err);
+            })
+    }
 });
 
 router.put('/:id', withAuth, (req, res) => {
