@@ -4,11 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>National Parks Reviews!</title>
-  <link href="css/style.css" rel="stylesheet" />
+  <link href="/css/style.css" rel="stylesheet" />
 </head>
 <body>
-  {{> partials/header}}
-
+  {{> header}}
+{{{body}}}
   {{#if session.user}}
     {{> dashboard}}
   {{else}}
