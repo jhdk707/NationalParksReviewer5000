@@ -71,7 +71,6 @@ router.get('/:id', (req, res) => { // find one post by id
         });
 });
 
-
 router.post('/', async (req, res) => {
     //example usage:
     //POST localhost:3001/api/post
@@ -114,6 +113,7 @@ router.put('/:id', withAuth, (req, res) => {
             res.status(500).json(err);
         });
 });
+
 router.delete('/:id', withAuth, (req, res) => {
     Post.destroy({
         where: {
