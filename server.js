@@ -4,7 +4,6 @@ const express = require("express");
 const session = require("express-session");
 const exphbs = require("express-handlebars");
 const routes = require("./controllers");
-// const signupRoutes = require("./controllers/api/signupRoutes.js");
 const helpers = require("./utils/helpers");
 
 // import connection to sequelize
@@ -17,10 +16,7 @@ const PORT = process.env.PORT || 3001;
 // Set up Handlebars.js engine instance with custom helpers
 const hbs = exphbs.create({
   helpers,
-  // extname: ".hbs",
-  // defaultLayout: "main",
-  // layoutsDir: path.join(__dirname, "views/layouts"),
-  // partialsDir: path.join(__dirname, "views/partials"),
+  partialsDir: path.join(__dirname, "views/partials"),
 });
 
 const sess = {
@@ -34,6 +30,9 @@ const sess = {
 };
 
 app.use(session(sess));
+
+//import BULMA for css styling on handlebars templates
+app.use("/bulma", express.static(__dirname + "/node_modules/bulma/css/"));
 
 // Inform Express.js on which template engine to use
 app.engine("handlebars", hbs.engine);

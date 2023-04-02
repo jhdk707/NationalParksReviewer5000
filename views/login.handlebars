@@ -1,15 +1,35 @@
-<form class="login-form">
-
-  <h2 class="text-center">Log in</h2>
-  <div class="form-group">
-    <input type="email" id="email-login" name="email" class="form-control" placeholder="Email">
+<section class="section">
+  <div class="container">
+    <div class="columns is-centered is-vcentered">
+      <form class="login-form column is-two-thirds">
+        <div class="box">
+          <div class="field">
+            <label for="email-login"></label>
+            <div class="control has-icons-left">
+              <input type="email" id="email-login" name="email" class="input is-normal is-hovered" placeholder="Email">
+              <span class="icon is-small is-left">
+                <i class="fas fa-envelope"></i>
+              </span>
+            </div>
+          </div>
+          <div class="field">
+            <label for="password-login"></label>
+            <div class="control has-icons-left">
+              <input type="password" id="password-login" name="password" class="input is-normal is-hovered" placeholder="Password">
+              <span class="icon is-small is-left">
+                <i class="fas fa-lock"></i>
+              </span>
+            </div>
+          </div>
+          <div class="field">
+            <div class="control">
+              <button class="button is-primary is-fullwidth" id="login-btn" type="submit">Log in</button>
+            </div>
+          </div>
+          <p class="text-center">Don't have an account? <a href="/signup">Sign up here</a></p>
+        </div>
+      </form>
+      <script src="/js/login.js"></script>
+    </div>
   </div>
-  <div class="form-group">
-    <input type="password" id="password-login" name="password" class="form-control" placeholder="Password">
-  </div>
-  <div class="form-group">
-    <button class="btn btn-lg btn-primary btn-block" id="login-btn" type="submit">Log in</button>
-  </div>
-  <p class="text-center">Don't have an account? <a href="/signup">Sign up here</a></p>
-</form>
-<script src="/js/login.js"></script>
+</section>
