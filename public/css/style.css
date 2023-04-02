@@ -1,26 +1,18 @@
-/* *,
-::before,
-::after {
-  box-sizing: border-box;
-  border-width: 0;
-  border-style: solid;
-  border-color: #e5e7eb;
-}
+/* CSS Created 3/30/23 by Jesse Hudak, Robert Lee, Paige Girardi and Robert Lee
 
-::before,
-::after {
-  --tw-content: "";
-}
+===== COLOR PALLET =====
+Created with Coolors.com 
+Oxford Blue: #011936 
+Charcoal: #465362
+Cambridge Blue: #82A3A1 
+Olivine: #94C490
+Tea Green: #C0DFA1 
+
+
+
+*/
 
 html {
-  line-height: 1.5;
-  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
-    "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  font-feature-settings: normal;
-}
-/*  */
-body {
   margin: 0;
   background-image: url("https://images.pexels.com/photos/640907/pexels-photo-640907.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
   background-repeat: no-repeat;
@@ -28,94 +20,23 @@ body {
   justify-content: center;
   text-align: center;
   height: 100%;
-}
-/*  
-hr {
-  height: 0;
-  color: inherit;
-  border-top-width: 1px;
-}
-
-abbr:where([title]) {
-  text-decoration: underline dotted;
+  line-height: 1.5;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-feature-settings: normal;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-size: inherit;
-  font-weight: inherit;
+.navbar {
+  height: 150px;
+  background-color: #011936;
 }
 
-a {
-  color: inherit;
-  text-decoration: inherit;
+.navbar img {
+  max-height: 100%;
 }
 
-b,
-strong {
-  font-weight: bolder;
+.navbar-item,
+.navbar-link {
+  color: bisque;
 }
-
-code,
-kbd,
-samp,
-pre {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
-    "Liberation Mono", "Courier New", monospace;
-  font-size: 1em;
-}
-
-small {
-  font-size: 80%;
-}
-
-sub,
-sup {
-  font-size: 75%;
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline;
-}
-
-sub {
-  bottom: -0.25em;
-}
-
-sup {
-  top: -0.5em;
-}
-
-table {
-  text-indent: 0;
-  border-color: inherit;
-  border-collapse: collapse;
-}
-
-button,
-input,
-optgroup,
-select,
-textarea {
-  font-family: inherit;
-  font-size: 100%;
-  font-weight: inherit;
-  line-height: inherit;
-  color: black;
-  margin: 0;
-  padding: 0;
-}
-
-button,
-select {
-  text-transform: none;
-}
-
-[type="button"],
-[type="reset"],
-[type="submit"] {
-  appearance: button;
-} */
