@@ -84,7 +84,10 @@ router.post('/', async (req, res) => {
         }
     */
     
-    Post.create(req.body)
+    Post.create({
+        ...req.body, 
+        user_id: req.session.user_id,
+    })
         .then((dbPostData) => {
         res.json(dbPostData);
     })

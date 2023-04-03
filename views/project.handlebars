@@ -11,8 +11,8 @@
       </div>
     {{/each}}
 
-    <form action="/post/{{id}}/comment" method="POST">
-      <textarea name="content"></textarea>
+    <form class = "comment-form">
+      <textarea name="content" id="commentText"></textarea>
       <button type="submit">Add Comment</button>
     </form>
     
@@ -24,3 +24,4 @@
       <a href="/signup">Signup</a>
     {{/if}}
   
+<script src="/js/comment.js"></script>
