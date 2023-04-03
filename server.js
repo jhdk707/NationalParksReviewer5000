@@ -34,6 +34,11 @@ app.use(session(sess));
 //import BULMA for css styling on handlebars templates
 app.use("/bulma", express.static(__dirname + "/node_modules/bulma/css/"));
 
+app.get("/burger.js", function (req, res) {
+  res.set("Content-Type", "text/javascript");
+  res.sendFile(__dirname + "/public/js/burger.js");
+});
+
 // Serve static files from the 'public' directory
 app.use(express.static(path.join(__dirname, "public")));
 
