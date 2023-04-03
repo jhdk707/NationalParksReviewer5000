@@ -40,3 +40,12 @@ html {
 .navbar-link {
   color: bisque;
 }
+
+.typed {
+  color: bisque;
+  font-size: 2rem;
+  font-weight: 700;
+  text-decoration: dotted;
+  padding-top: 50px;
+  margin-right: 15px;
+}
