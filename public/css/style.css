@@ -1,4 +1,4 @@
-/* CSS Created 3/30/23 by Jesse Hudak, Robert Lee, Paige Girardi and Robert Lee
+/* CSS Created 3/30/23 by Jesse Hudak, George Semfield, Paige Girardi and Robert Lee
 
 ===== COLOR PALLET =====
 Created with Coolors.com 
@@ -25,6 +25,7 @@ html {
     "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-feature-settings: normal;
+  font-size: medium;
 }
 
 .navbar {
@@ -32,13 +33,39 @@ html {
   background-color: #011936;
 }
 
-.navbar img {
-  max-height: 100%;
+.navbar-item img {
+  max-height: 7rem;
+  width: auto;
+  height: auto;
+  padding: 0.05rem;
 }
 
 .navbar-item,
 .navbar-link {
   color: bisque;
+}
+
+.navbar-item {
+  margin: 0 1rem;
+  padding: 0.5rem 0;
+}
+
+.navbar-dropdown .navbar-item {
+  color: #011936;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar-item.typed {
+  position: relative;
+  top: -2px;
+  margin-left: 10px;
+  font-size: 1.25rem;
+  white-space: nowrap;
 }
 
 .typed {
@@ -48,4 +75,118 @@ html {
   text-decoration: dotted;
   padding-top: 10px;
   margin-right: 15px;
+}
+
+.post-box {
+  border: 2px solid #94c490;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #f9f9f9;
+}
+
+.navbar-burger {
+  font-size: 1rem; /*  Adjust the value to make the burger button bigger */
+  color: bisque;
+  padding: 3em;
+}
+
+/* Media Query and Navbar Burger */
+/* Small screens */
+@media screen and (max-width: 768px) {
+  .navbar-menu {
+    display: none;
+  }
+
+  .navbar-burger {
+    display: block;
+  }
+
+  .navbar.is-active .navbar-menu {
+    display: block;
+    background-color: #011936 !important; /* set the background color */
+  }
+
+  .navbar-item {
+    padding: 0.5rem 0;
+  }
+
+  .navbar {
+    background-color: #011936;
+  }
+
+  .navbar-item,
+  .navbar-link {
+    color: #011936; /* set the link color */
+  }
+
+  .navbar-dropdown {
+    background-color: bisque;
+  }
+
+  .navbar-dropdown-item {
+    color: #011936;
+  }
+
+  .typed {
+    font-size: 1.5rem;
+    padding-top: 5px;
+    display: block;
+  }
+}
+
+/* fixing weird 1000-768px breakpoint with navbar */
+@media screen and (max-width: 1000px) {
+  .navbar-menu {
+    display: none;
+  }
+
+  .navbar-burger {
+    display: block;
+  }
+
+  .navbar.is-active .navbar-menu {
+    display: block;
+    background-color: #011936 !important;
+  }
+
+  .navbar-item {
+    padding: 0.5rem 0;
+  }
+
+  .navbar {
+    background-color: #011936;
+  }
+
+  .navbar-item,
+  .navbar-link {
+    color: #011936;
+  }
+
+  .navbar-dropdown {
+    background-color: bisque;
+  }
+
+  .navbar-dropdown.is-right {
+    background-color: #011936;
+  }
+
+  .navbar-dropdown-item {
+    color: bisque;
+  }
+
+  .typed {
+    font-size: 1.5rem;
+    padding-top: 5px;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .navbar-menu {
+    display: none;
+  }
+
+  .typed-text {
+    display: block !important;
+  }
 }
