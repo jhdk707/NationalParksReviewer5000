@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
   <link href="/css/style.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
+  <script src="https://unpkg.com/typed.js@2.0.15/dist/typed.umd.js"></script>
 </head>
 
 <body>
@@ -19,7 +20,12 @@
     {{> login}}
   {{/if}}
 
-  <script src="/js/login.js"></script>
+  {{!-- <script src="/js/login.js"></script> --}}
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+  <script>
+    gsap.from('#login-section', {duration: 1.5, y: '-100%', ease: 'bounce'})
+    gsap.from('#signup-section', {duration: 1.5, y: '-100%', ease: 'bounce'})
+  </script>
 
 </body>
 </html>
