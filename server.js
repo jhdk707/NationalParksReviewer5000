@@ -34,6 +34,9 @@ app.use(session(sess));
 //import BULMA for css styling on handlebars templates
 app.use("/bulma", express.static(__dirname + "/node_modules/bulma/css/"));
 
+// Serve static files from the 'public' directory
+app.use(express.static(path.join(__dirname, "public")));
+
 // Inform Express.js on which template engine to use
 app.engine("handlebars", hbs.engine);
 app.set("view engine", "handlebars");
@@ -46,15 +49,16 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use("/", routes);
 // app.use("/api/signup", signupRoutes);
 
+// Error handling middleware
+app.use((err, req, res, next) => {
+  console.error(err.stack);
+  res.status(500).send("Something broke!");
+});
+
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () =>
     console.log(`Now listening on http://localhost:${PORT}`)
   );
 });
-
-// // Serve the index.js file to the client
-// app.get("/index.js", (req, res) => {
-//   res.sendFile(path.join(__dirname, "public", "js", "index.js"));
-// });
 
 app.set("Content-Type", "text/javascript");
