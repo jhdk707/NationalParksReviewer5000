@@ -90,8 +90,16 @@
           </a>
         </div>
       </div>  
+        {{#if logged_in}}
+            <a class="navbar-item" id="logout">Logout</a>
+          {{else}}
+          {{/if}}
     </div>
   </div>
 
   <script src="burger.js"></script>
+  {{#if logged_in}}
+    <script src="/js/logout.js"></script>
+  {{/if}}
+
 </nav>
