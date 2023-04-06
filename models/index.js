@@ -1,8 +1,8 @@
-const path = require('path')
-let currentPath = path.join(__dirname)
-const Comment = require('./Comment');
+
+const Comment = require("./Comment");
 const Post = require('./Post');
 const User = require('./User');
+
 
 
 //post - user
