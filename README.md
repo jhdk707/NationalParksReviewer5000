@@ -16,7 +16,16 @@
 
 ## INSTALLATION
 
-## USAGE
+`npm i`
+`mysql -u root -p`
+`source .db/schema.sql`
+`use ntlprksreviewer`
+`npm run seed`
+`npm start`
+
+## USER STORY
+
+`We want to creat`
 
 ## TECHNOLOGIES USED
 
