@@ -1,0 +1,105 @@
+{{!-- <nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="/">
+      <img src="/ntlprkspinecone.png"/>
+    </a>
+
+    <a role="button" class="navbar-burger burger is-medium" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span>Menu</span>
+    </a>
+  </div>
+
+ <div id="navBar" class="navbar-menu navbar-end">
+    <div class="navbar-start">
+      <a class="navbar-item" href="/dashboard">
+        Dashboard
+      </a>
+
+      <a class="navbar-item" href="/">
+        Reviews
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More
+        </a>
+
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="/contact">
+            Contact Us
+          </a>
+          <a class="navbar-item" href="https://www.nps.gov/index.htm">
+            National Parks Website 
+          </a>
+        </div>
+      </div>
+       
+    </div>
+    <div class="navbar-item typed"><span></span></div>
+  </div>
+
+  <script src="burger.js"></script>
+   <script>
+    var typed = new Typed('.typed', {
+      strings: ["National Parks Reviews!", "Find your next adventure!", "Share your experiences!"],
+      typeSpeed: 50,
+      backSpeed: 50,
+      loop: true
+    });
+  </script>
+</nav> --}}
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="/">
+      <img src="/ntlprkspinecone.png"/>
+    </a>
+
+    <a role="button" class="navbar-burger burger is-medium" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span>Menu</span>
+    </a>
+  </div>
+
+ <div id="navBar" class="navbar-menu navbar-end">
+    <div class="navbar-start">
+      <a class="navbar-item" href="/dashboard">
+        Dashboard
+      </a>
+
+      <a class="navbar-item" href="/">
+        Reviews
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More
+        </a>
+
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="/contact">
+            Contact Us
+          </a>
+          <a class="navbar-item" href="https://www.nps.gov/index.htm">
+            National Parks Website 
+          </a>
+        </div>
+      </div>  
+        {{#if logged_in}}
+            <a class="navbar-item" id="logout">Logout</a>
+          {{else}}
+          {{/if}}
+    </div>
+  </div>
+
+  <script src="burger.js"></script>
+  {{#if logged_in}}
+    <script src="/js/logout.js"></script>
+  {{/if}}
+
+</nav>

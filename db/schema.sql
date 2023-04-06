@@ -1,0 +1,5 @@
+-- DROP DATABASE
+DROP DATABASE IF EXISTS ntlprksreview;
+
+-- CREATE DATABASE
+CREATE DATABASE ntlprksreview;

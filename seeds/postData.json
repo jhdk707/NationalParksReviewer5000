@@ -1,0 +1,17 @@
+[
+    {
+        "title": "Yosemite was AWE-SOME",
+        "content": "We loved it so much!",
+        "user_id": 1
+    },
+    {
+        "title": "The Grand Canyon is Grand indeed!",
+        "content": "test Content2",
+        "user_id": 2
+    },
+    {
+        "title": "test Title3",
+        "content": "test Content3",
+        "user_id": 1
+    }
+  ]

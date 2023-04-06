@@ -1,0 +1,28 @@
+
+    <h1>{{title}}</h1>
+    <p>{{content}}</p>
+    <p>Posted by {{username}}</p>
+    
+    <h2>Comments</h2>
+    {{#each comments}}
+      <div>
+        <p>{{content}}</p>
+        <p>Posted by {{this.user.username}}</p>
+      </div>
+    {{/each}}
+
+    <form class = "comment-form">
+      <textarea name="content" id="commentText"></textarea>
+      <button type="submit">Add Comment</button>
+    </form>
+    
+    {{#if logged_in}}
+      <a href="/dashboard">Dashboard</a>
+      <a id="logout">Logout</a>
+    {{else}}
+      <a href="/login">Login</a>
+      <a href="/signup">Signup</a>
+    {{/if}}
+  
+<script src="/js/comment.js"></script>
+<script src="/js/logout.js"></script>
