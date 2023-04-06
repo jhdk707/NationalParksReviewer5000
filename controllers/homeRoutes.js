@@ -104,4 +104,14 @@ router.get("/signup", (req, res) => {
   res.render("signup");
 });
 
+router.get("/contact", (req, res) => {
+  // If the user is already logged in, redirect the request to another route
+  if (req.session.logged_in) {
+    res.redirect("/contact");
+    return;
+  }
+
+  res.render("/contact");
+});
+
 module.exports = router;

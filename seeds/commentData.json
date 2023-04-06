@@ -1,16 +1,16 @@
 [
     {
-        "content": "test Comment Content1",
+        "content": " El Capitan is magnificent in the sunset.  ",
         "user_id": 1,
         "post_id": 1
     },
     {
-        "content": "test Comment Content2",
+        "content": "You've never seen something quite so grand before. Dare you to count the layers in the stone.",
         "user_id": 2,
         "post_id": 2
     },
     {
-        "content": "test Comment Content3",
+        "content": "Go to Oklahoma and experience the lush green mountain sides",
         "user_id": 3,
         "post_id": 3
     }
