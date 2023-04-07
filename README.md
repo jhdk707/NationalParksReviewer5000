@@ -14,6 +14,10 @@
 
 ---
 
+## SCREENSHOT
+
+![Screeshot of Loaded App](/public/NTLPRKSSCREENCAP.png)
+
 ## INSTALLATION
 
 `npm i`
@@ -23,16 +27,27 @@
 `npm run seed`
 `npm start`
 
+`[Visit our Herkou Link to use the app](https://lit-eyrie-51719.herokuapp.com/)`
+
+## USAGE
+
+`You can use our application to review National Parks in the continental United States to let people know about your experience at the park, and other users can comment on your experience and share thoughts!`
+
 ## USER STORY
 
-`We want to creat`
+`We want to create a platform in which people can focus on and spread the joys of adventuring and exploring the beautiful great American outdoors. People can connect, explore and make memories that will last a lifetime.`
 
 ## TECHNOLOGIES USED
 
-## DESCRIPTIONS
+`Bulma, GSAP, Typed.js, MySQL, Sequelize, HTML, Express-Handlebars, Node, Handler, BCrypt, Inquirer`
 
 ## GITHUB LINKS
 
-## SCREENSHOTS
+`[Project Repository](https://github.com/jhdk707/NationalParksReviewer5000)`
 
-## DEMO
+### CONTRIBUTORS
+
+`[Paige Girardi](https://github.com/pmgirardi)`
+`[George Semfield](https://github.com/gosem01)`
+`[Jesse Hudak](https://github.com/jhdk707)`
+`[Robert Lee](Github.com/rlee7029)`

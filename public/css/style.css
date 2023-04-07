@@ -28,6 +28,10 @@ html {
   font-size: medium;
 }
 
+html body section.hero.is-fullheight.is-centered {
+  padding: 5%;
+}
+
 .navbar {
   height: 150px;
   background-color: #011936;
