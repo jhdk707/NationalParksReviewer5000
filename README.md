@@ -27,7 +27,7 @@
 `npm run seed`
 `npm start`
 
-`[Visit our Herkou Link to use the app](https://lit-eyrie-51719.herokuapp.com/)`
+[Visit our Herkou Link to use the app](https://lit-eyrie-51719.herokuapp.com/)
 
 ## USAGE
 
@@ -43,11 +43,11 @@
 
 ## GITHUB LINKS
 
-`[Project Repository](https://github.com/jhdk707/NationalParksReviewer5000)`
+[Project Repository](https://github.com/jhdk707/NationalParksReviewer5000)
 
 ### CONTRIBUTORS
 
-`[Paige Girardi](https://github.com/pmgirardi)`
-`[George Semfield](https://github.com/gosem01)`
-`[Jesse Hudak](https://github.com/jhdk707)`
-`[Robert Lee](Github.com/rlee7029)`
+[Paige Girardi](https://github.com/pmgirardi)
+[George Semfield](https://github.com/gosem01)
+[Jesse Hudak](https://github.com/jhdk707)
+[Robert Lee](Github.com/rlee7029)
