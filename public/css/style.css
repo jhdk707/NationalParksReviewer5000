@@ -8,8 +8,6 @@ Cambridge Blue: #82A3A1
 Olivine: #94C490
 Tea Green: #C0DFA1 
 
-
-
 */
 
 html {
@@ -26,6 +24,7 @@ html {
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-feature-settings: normal;
   font-size: medium;
+  align-items: center; /* Vertically center the content */
 }
 
 html body section.hero.is-fullheight.is-centered {
@@ -82,11 +81,19 @@ html body section.hero.is-fullheight.is-centered {
   height: 60px;
 }
 
+.typed-text {
+  text-shadow: 2px, 2px, bisque;
+}
+
 .post-box {
   border: 2px solid #94c490;
   padding: 10px;
   margin-bottom: 10px;
   background-color: #f9f9f9;
+}
+
+div.column:nth-child(6) {
+  visibility: hidden;
 }
 
 .navbar-burger {
@@ -101,7 +108,15 @@ html body section.hero.is-fullheight.is-centered {
   padding: 20px;
   background-color: #f5f5f5;
   border: 1px solid #e5e7eb;
+  overflow: auto; /* Add overflow property */
+  /* Set maximum height to the viewport height */
+  max-height: 100vh;
+  /* Add a padding to allow for scrolling within the container */
+  padding: 10px;
+  /* Set overflow property to auto to enable scrolling when content exceeds container height */
+  overflow-y: auto;
 }
+
 
 h1 {
   font-size: 24px;
@@ -143,9 +158,67 @@ p {
   text-decoration: none;
 }
 
+.footer {
+  background-color: #011936;
+  color: bisque;
+  padding: 1rem;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: space-between; /* Aligns items on opposite ends horizontally */
+  align-items: center; /* Aligns items vertically in the center */
+}
+
+.footer-links p {
+  margin-right: 1rem; /* Add margin between the text and button */
+}
+
+.footer-links a {
+  margin-left: 1rem;
+}
+
+.button {
+  background-color: #209cee;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+}
+
+.button:hover {
+  background-color: #007bff;
+}
+
+.footer-text {
+  font-size: 0.9rem;
+}
+
 /* Media Query and Navbar Burger */
 /* Small screens */
 @media screen and (max-width: 768px) {
+
+  html {
+    /* Add styles for the background image on smaller screens */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 100vh; /* Set height to viewport height */
+  }
+
+
+
+
   .navbar-menu {
     display: none;
   }
@@ -185,6 +258,17 @@ p {
     padding-top: 5px;
     display: block;
   }
+
+  .reviews-container {
+    /* Reset maximum height to 100% to allow for full height scrolling on smaller screens */
+    max-height: 100%;
+    /* Reset padding to 0 to save space on smaller screens */
+    padding: 0;
+    /* Set overflow property to auto to enable scrolling when content exceeds container height */
+    overflow-y: auto;
+    /* Add a margin to keep the reviews content within the viewport */
+    margin-bottom: 60px; /* Adjust value as needed */
+  }
 }
 
 /* fixing weird 1000-768px breakpoint with navbar */
@@ -223,16 +307,18 @@ p {
     background-color: #011936;
   }
 
-  .navbar-dropdown-item {
+  /* .navbar-dropdown-item {
     color: bisque;
-  }
+  } */
 
   .typed {
     font-size: 1.5rem;
     padding-top: 5px;
     display: block;
+    /* text-shadow: .5em, .5em, 1em, bisque; */
   }
 }
+
 
 @media screen and (max-width: 1023px) {
   .navbar-menu {
