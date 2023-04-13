@@ -12,12 +12,12 @@ Tea Green: #C0DFA1
 
 html {
   margin: 0;
-  background-image: url("https://images.pexels.com/photos/640907/pexels-photo-640907.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  background-image: url("../grandcanyonocjdk707.png");
   background-repeat: no-repeat;
   background-size: cover;
   justify-content: center;
   text-align: center;
-  height: 100%;
+  height: 150%;
   line-height: 1.5;
   font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
     "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
@@ -117,7 +117,6 @@ div.column:nth-child(6) {
   overflow-y: auto;
 }
 
-
 h1 {
   font-size: 24px;
   margin-bottom: 10px;
@@ -207,17 +206,17 @@ p {
 /* Media Query and Navbar Burger */
 /* Small screens */
 @media screen and (max-width: 768px) {
-
-  html {
-    /* Add styles for the background image on smaller screens */
-    background-repeat: no-repeat;
+  /* html { */
+  /* Add styles for the background image on smaller screens */
+  /* background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-    height: 100vh; /* Set height to viewport height */
+    height: 100vh; 
+  } */
+
+  html {
+    background-size: cover; /* or you can use "contain" if you want to fit the image within the screen without cropping */
   }
-
-
-
 
   .navbar-menu {
     display: none;
@@ -318,7 +317,6 @@ p {
     /* text-shadow: .5em, .5em, 1em, bisque; */
   }
 }
-
 
 @media screen and (max-width: 1023px) {
   .navbar-menu {
